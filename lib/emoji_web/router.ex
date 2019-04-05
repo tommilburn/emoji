@@ -17,7 +17,8 @@ defmodule EmojiWeb.Router do
     pipe_through :browser
 
     #get "/", PageController, :index
-    get "/emoji/:emoji_name", EmojiController, :show
+    get "/emoji/:emoji_name", EmojiController, :match_single_emoji
+    get "/emojis", EmojiController, :match_any_emojis
 
   end
 
